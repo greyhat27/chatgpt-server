@@ -19,7 +19,7 @@ const configuration = new Configuration({
 
 const openai = new OpenAIApi(configuration);
 
-app.listen("3080", () => console.log("listening on port 3080"));
+app.listen("5000", () => console.log("listening on port 3080"));
 
 app.get("/", (req, res) => {
   res.send("Hello World");
