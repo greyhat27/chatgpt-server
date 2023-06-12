@@ -13,7 +13,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 const configuration = new Configuration({
-  organization: "org-cXsUSaCyQCykOmkhQ5f9wd1K",
+  organization: "org-rcMopDvySnWx1syIoRyLL9y0",
   apiKey: process.env.API_KEY,
 });
 
