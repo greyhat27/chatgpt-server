@@ -32,10 +32,13 @@ app.post("/", async (req, res) => {
     const response = await openai.createCompletion({
       model: "text-davinci-003",
       prompt: `${message}`,
-      max_tokens: 100,
-      temperature: .5,
+      temperature: 1,
+      max_tokens: 256,
+      top_p: 1,
+      frequency_penalty: 0,
+      presence_penalty: 0,
     });
-    res.json({message: response.data.choices[0].text})
+    res.json({ message: response.data.choices[0].text });
   } catch (err) {
     console.log("Error occurred", err);
     res.send(err).status(400);
